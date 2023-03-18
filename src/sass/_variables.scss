@@ -1,0 +1,46 @@
+// Variables a emplear
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+// Colores
+$colorLight-work: hsl(15, 100%, 70%);
+$colorSoft-play: hsl(195, 74%, 62%);
+$colorLight-study: hsl(348, 100%, 68%);
+$colorLime-exercise: hsl(145, 58%, 55%);
+$colorViolet-social: hsl(264, 64%, 52%);
+$colorSoft-self-care: hsl(43, 84%, 65%);
+$colorVery-dark: hsl(226, 43%, 10%);
+$colorDark: hsl(235, 46%, 20%);
+$colorDarkHover: hsl(236, 48%, 35%);
+$colorDesaturated: hsl(235, 45%, 61%);
+$colorPale: hsl(236, 100%, 87%);
+$colorWhite: white;
+$fontSizeCardTitle: 18px;
+
+$font-family: 'Rubik', sans-serif;
+
+$max-width-container: 1000px;
+$height-container: 550px;
+
+// para la clase info-person
+$flex-basis-info-person: 240px;
+$max-height-mobile: 200px;
+
+// para data person
+$height-data-person: 60%;
+$width-data-person-img: 80px;
+$height-data-person-img: 80px;
+
+// para info options
+$height-info-options: 50%;
+
+// Tamaños
+$extra-large: 1200px;
+$large: 992px;
+$medium: 800px;
+$small: 600px;
+
+// para las cards
+$flex-basis-card: 225px;
+$card-height: ($height-container / 2) - 10px;
+
+$gap-sections: 20px;

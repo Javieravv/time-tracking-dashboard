@@ -1,0 +1,280 @@
+// Estilos principales para la aplicación
+@import "reset";
+@import "variables";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    background-color: $colorVery-dark;
+    width: 100%;
+    margin: 0 auto;
+}
+
+// Contenedor principal 
+.mainContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: $large) {
+        
+    }
+
+    @media screen and (max-width: $medium) {
+        
+    }
+}
+
+
+// Css para el contenedor principal 
+.container-timetracking {
+    // background-color: $colorVery-dark;
+    min-width: $max-width-container;
+    min-height: $height-container;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $gap-sections;
+
+    @media screen and (max-width: $large) {
+        min-width: $large;
+    }
+
+    @media screen and (max-width: $medium) {
+        min-width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 8px;
+    }
+}
+
+/*=================================================================
+css para info-peron
+=================================================================*/
+.info-person {
+    flex-basis: $flex-basis-info-person;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    // Media queries
+    @media screen and (max-width: $large) {
+        flex-basis: $flex-basis-info-person - 50px;
+    }
+
+    @media screen and (max-width: $medium) {
+        flex-basis: $flex-basis-info-person * 3;
+        max-height: $max-height-mobile;
+    }
+}
+
+.data-person {
+    height: 65%;
+    background-color: rgb(44, 139, 221);
+    position: absolute;
+    border-radius: 16px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20% 30px;
+
+    img {
+        width: $width-data-person-img;
+        height: $height-data-person-img;
+    }
+
+    .name-person {
+        display: flex;
+        flex-direction: column;
+        color: $colorWhite;
+        padding: 20px 0;
+
+        p:last-child {
+            font-size: 2rem;
+        }
+    }
+
+    // Media queries
+    @media screen and (max-width: $large) {
+        
+    }
+
+    @media screen and (max-width: $medium) {
+        height: 55%;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 15%;
+    }
+}
+
+.info-options {
+    height: 40%;
+    position: absolute;
+    z-index: 4;
+    background-color: $colorDark;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25% 30px 20% 30px;
+    border-radius: 16px;
+    
+    a { 
+        color: white;
+    }
+
+    // Media queries
+    @media screen and (max-width: $large) {
+        
+    }
+
+    @media screen and (max-width: $medium) {
+        height: 60%;
+        flex-direction: row;
+        padding: 5% 15% 0 15%;
+        align-items: center;
+    }
+}
+
+
+/*=================================================================
+ css para info time 
+=================================================================*/
+.info-time {
+    flex-basis: 0;
+    flex-grow: 999;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: $gap-sections;
+
+    // Media queries
+    @media screen and (max-width: $large) {
+
+    }
+
+    @media screen and (max-width: $medium) {
+        flex-direction: column;
+    }
+}
+
+.card {
+    flex-basis: $flex-basis-card;
+    flex-grow: 1;
+    // height: $card-height;
+    position: relative;
+
+    .card-color {
+        position: absolute;
+        background-color: red;
+        height: 65%;
+        left: 0;
+        right: 0;
+        z-index: 4;
+        border-radius: 16px;
+
+        img {
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    .card-time {
+        position: absolute;
+        height: 80%;
+        z-index: 5;
+        background-color: $colorDark;
+        color: $colorWhite;
+        // top: 25%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-left: 10%;
+        padding-right: 10%;
+        transition: all 0.25s ease;
+
+        &:hover {
+            background-color: $colorDarkHover;
+        }
+    }
+
+    .card-time div:first-child {
+        display: flex;
+        flex: row;
+        justify-content: space-between;
+        position: relative;
+        padding: 4px 0;
+    }
+
+    .card-time div:first-child img {
+        height: 5px;
+    }
+
+    .card-time div:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 4px 0;
+
+        p:first-child {
+            font-size: 2rem;
+        }
+
+        p:last-child {
+        }
+    }
+
+    // Media queries
+
+    @media screen and (max-width: $large) {
+
+    }
+
+    @media screen and (max-width: $medium) {
+        // height: 200px;
+        flex-basis: $flex-basis-card - 30;
+
+
+        .card-color {
+            height: 100px;
+        }
+
+        .card-time {
+            height: 150px;
+            justify-content: center;
+        }
+
+        .card-time div:first-child {
+            flex-direction: row;
+        }
+
+        .card-time div:last-child {
+            flex-direction: row;
+    
+            p:first-child {
+                font-size: 2rem;
+            }
+    
+            p:last-child {
+            }
+        }
+    }
+}

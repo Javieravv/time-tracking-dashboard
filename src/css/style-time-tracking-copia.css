@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+/* Componentes para este proyecto */
+
+:root {
+    --colorLight-work: hsl(15, 100%, 70%);
+    --colorSoft-play: hsl(195, 74%, 62%);
+    --colorLight-study: hsl(348, 100%, 68%);
+    --colorLime-exercise: hsl(145, 58%, 55%);
+    --colorViolet-social: hsl(264, 64%, 52%);
+    --colorSoft-self-care: hsl(43, 84%, 65%);
+    --colorVery-dark: hsl(226, 43%, 10%);
+    --colorDark: hsl(235, 46%, 20%);
+    --colorDesaturated: hsl(235, 45%, 61%);
+    --colorPale: hsl(236, 100%, 87%);
+    --fontSizeCardTitle: 18px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.container-timetracking {
+    /* display: grid; */
+    max-width: 1200px;
+    display: flex;
+    /* flex-direction: row; */
+    /* max-width: 1200px; */
+    /* grid-template-columns: 300px 1fr; */
+    min-height: 500px;
+    gap: 10px;
+    border: 1px red solid;
+    padding: 5px 8px;
+}
+
+/*Css para la persona*/
+
+.info-person {
+    flex-basis: 300px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    position: relative;
+}
+
+.data-person {
+    /* height: 300px; */
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px 30px;
+    background-color: var(--colorDesaturated);
+    border-radius: 10px;
+    position: absolute;
+}
+
+.data-person img {
+    width: 80px;
+    height: 80px;
+}
+
+.name-person {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.name-person p:first-child {
+    color: white;
+}
+
+.name-person p:last-child {
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    padding: 10px 0;
+}
+
+.info-options {
+    /* height: 230px; */
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20% 25px;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    background-color:  var(--colorDark);
+    margin-top: 0px;
+    z-index: -5;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.info-options a {
+    text-decoration: none;
+    padding: 4px 0;
+    color: white
+}
+
+/*Css para la informacion de actividades*/
+.info-time {
+    flex-basis: 0;
+    flex-grow: 999;
+    gap: 10px;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+}
+
+.card {
+    position: relative;
+    min-height: 250px;
+    flex-basis: 250px;
+    flex-grow: 1;
+}
+
+.card-color {
+    position: absolute;
+    background-color: green;
+    width: 100%;
+    height: 100px;
+    z-index: -5;
+    border-radius: 10px;
+}
+
+.card-time {
+    position: absolute;
+    background-color: var(--colorDark);
+    color: white;
+    width: 100%;
+    top: 50px;
+    z-index: 5;
+    height: 190px;
+    border-radius: 10px;
+    padding: 15px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card-time div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-time div:first-child p {
+    font-size: 18px;
+}
+
+.card-time div:first-child img {
+    width: 20px;
+    height: 5px;
+}
+
+.card-time div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-time div:last-child p:first-child {
+    font-size: 2.5rem;
+    padding: 10px 0;
+}
+
+.card-time div:last-child p:last-child {}
+
+/* Queryies para los mobiles*/
+
+@media (max-width: 800px) {
+    /*Css para la informacion de actividades*/
+    .info-person {
+        
+    }
+
+    .info-time {
+        /* grid-template-columns: 1fr 1fr; */
+        /* justify-content: space-between; */
+    }
+}
+
+
+@media (max-width: 600px) {
+    .container-timetracking {
+        /* grid-template-columns: 1fr; */
+    }
+
+    /*Css para la persona*/
+
+    .info-person {
+        height: 200px;
+        /* justify-content: space-between; */
+    }
+    
+    .data-person {
+        height: 120px;
+        flex-direction: row;
+    }
+
+    .name-person {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .info-options {
+        height: 100px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10%;
+    }
+    
+    .info-options a {
+        text-decoration: none;
+        padding: 4px 0;
+        color: white
+    }
+
+    /*Css para la informacion de actividades*/
+    .info-time {
+        /* grid-template-columns: 1fr; */
+        /* justify-content: space-between; */
+    }
+
+    .card {
+        position: relative;
+        min-height: 200px;
+    }
+
+    .card-time {
+        /* top: 50px; */
+        z-index: 5;
+        height: 150px;
+    }
+
+    .card-time div:last-child {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+}
+
